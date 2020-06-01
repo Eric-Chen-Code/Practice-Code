@@ -1,4 +1,4 @@
-// FUnctions
+// Functions
 
 function calculateAge(birthYear) {
     return 2018 - birthYear;
@@ -21,7 +21,7 @@ yearsUntilRetirement(1990, "John");
 //Functions Statements and Expressions
 
 //Function declaration
-// function wjat(job, firstName) {}
+// function what(job, firstName) {}
 
 
 //Function Expression

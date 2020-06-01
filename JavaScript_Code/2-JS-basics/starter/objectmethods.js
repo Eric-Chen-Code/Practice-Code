@@ -1,4 +1,7 @@
+// Objects and Methods
+
 var john = {
+
     firstName: 'John',
     lastName: 'Smith',
     birthYear: 1992,
