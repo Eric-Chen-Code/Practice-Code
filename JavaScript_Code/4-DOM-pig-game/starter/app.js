@@ -51,22 +51,39 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
     // add score
   } else {
     //next player
-    activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
-    roundScore = 0;
-
-    document.getElementById("current-0").textContent = "0";
-    document.getElementById("current-0").textContent = "0";
-
-    //document.querySelector(".player-0-panel").classList.remove("active");
-    //document.querySelector(".player-1-panel").classList.add("active");
-
-    document.querySelector(".player-0-panel").classList.toggle("active");
-    document.querySelector(".player-1-panel").classList.toggle("active");
-
-    document.querySelector(".dice").style.display = "none";
+    nextPlayer();
   }
   // Can also write function here directly into event listener method
 });
 
-document.querySelector(".btn-hold").addEventListener("click", function () {});
+document.querySelector(".btn-hold").addEventListener("click", function () {
+  //Add CURRENT score to GLOBAL score
+  scores[activePlayer] += roundScore;
+
+  //Update the UI
+  document.querySelector("#score" + activePlayer).textContent =
+    scores[activePlayer];
+
+  // Check if player won the game
+  scores[activePlayer] >= 100 ? console.log("Player " + activePlayer " wins!")
+
+  // Next player
+  nextPlayer();
+});
 //btn function is called call back function because it is not called manually
+
+function nextPlayer() {
+  activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
+  roundScore = 0;
+
+  document.getElementById("current-0").textContent = "0";
+  document.getElementById("current-0").textContent = "0";
+
+  //document.querySelector(".player-0-panel").classList.remove("active");
+  //document.querySelector(".player-1-panel").classList.add("active");
+
+  document.querySelector(".player-0-panel").classList.toggle("active");
+  document.querySelector(".player-1-panel").classList.toggle("active");
+
+  document.querySelector(".dice").style.display = "none";
+}
