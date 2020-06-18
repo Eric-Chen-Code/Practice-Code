@@ -10,7 +10,7 @@ GAME RULES:
 */
 
 var scores, roundScore, activePlayer;
-scores = [0, 0]; //yes
+scores = [0, 0]; //maybe
 roundScore = 0;
 activePlayer = 0;
 
