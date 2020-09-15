@@ -1,0 +1,13 @@
+triangle 2
+
+n 1
+n 3
+
+box 0
+box 1
+
+xbox 0
+xbox 2
+
+zigzag 3 7
+zigzag 4 14

@@ -1,0 +1,17 @@
+is_empty
+status
+push Wow
+status
+push This
+status
+push Assignment
+status
+top
+push Was
+status
+push Disgusting
+status
+pop
+pop
+pop
+is_empty

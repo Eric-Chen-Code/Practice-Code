@@ -1,0 +1,6 @@
+int main(void) {
+  int i = 5 / 3; /* Division
+  by
+  3 */
+  return 0;
+}

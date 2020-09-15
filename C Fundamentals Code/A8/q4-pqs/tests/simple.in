@@ -1,0 +1,12 @@
+is_empty
+add Social 5
+is_empty
+add Keep 9
+add Distance! 0
+add More! 10
+front
+remove
+remove
+front
+front
+is_empty

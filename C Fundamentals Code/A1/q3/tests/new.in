@@ -1,0 +1,11 @@
+status
+cog 2
+sprocket 3
+status
+cog 2
+sprocket 3
+make
+status
+resize 5
+status
+quit

@@ -1,0 +1,6 @@
+status
+cog 10
+sprocket 15
+make
+status
+quit
