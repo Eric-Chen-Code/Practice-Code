@@ -9,7 +9,7 @@
    by Dave Tompkins [dtompkins@uwaterloo.ca]
    (with help from other CS 136 team members)
    
-   Version: 1.2 (September 2019)
+   Version: 1.2 (September 2020)
    
  ****************************************************************************/
 
