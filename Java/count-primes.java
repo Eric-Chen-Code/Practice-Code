@@ -1,38 +1,44 @@
 class Solution {
     public int countPrimes(int n) {
-        int count = 0;
-        int primes[] = new int[n + 1];
+        boolean isPrime[] = new boolean[n];
 
         for (int i = 2; i < n; i++) {
-            if (checkArray(i, primes, count)) {
-            } else if (isPrime(i)) {
-                primes[count] = i;
-                count += 1;
+            isPrime[i] = true;
+        }
+
+        for (int i = 2; i * i < n; i++) {
+            if (!isPrime[i])
+                continue;
+            for (int j = i * i; j < n; j += i) {
+                isPrime[j] = false;
             }
+        }
+
+        int count = 0;
+        for (int i = 2; i < n; i++) {
+            if (isPrime[i])
+                count++;
         }
 
         return count;
     }
-
-    public boolean isPrime(int n) {
-        boolean isPrime = true;
-        for (int i = 2; i * i <= n; i++) {
-            if (n % i == 0 && i != 1 && i != n) {
-                isPrime = false;
-            }
-        }
-        return isPrime;
-    }
-
-    public boolean checkArray(int n, int primes[], int count) {
-        // returns true if the specified n divisible by our primes list
-        // else returns false
-
-        for (int i = 0; i < count; i++) {
-            if (n % (primes[i]) == 0) {
-                return true;
-            }
-        }
-        return false;
-    }
 }
+
+// public boolean isPrime(int n) {
+// boolean isPrime = true;
+
+// return isPrime;
+// }
+
+// public boolean checkArray(int n, int primes[], int count) {
+// // returns true if the specified n divisible by our primes list
+// // else returns false
+
+// for (int i = 0; i < count; i++) {
+// if (n % (primes[i]) == 0) {
+// return true;
+// }
+// }
+// return false;
+// }
+// }
